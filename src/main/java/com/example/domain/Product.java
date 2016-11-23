@@ -22,12 +22,32 @@ public class Product {
 	private String imageUrl;
 	private BigDecimal price;
 
+	public Product() {
+	}
+
+	public Product(Integer id, Integer version, String productId, String description, String imageUrl,
+			BigDecimal price) {
+		super();
+		this.id = id;
+		this.version = version;
+		this.productId = productId;
+		this.description = description;
+		this.imageUrl = imageUrl;
+		this.price = price;
+	}
+
 	public String getDescription() {
 		return description;
 	}
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", version=" + version + ", productId=" + productId + ", description="
+				+ description + ", imageUrl=" + imageUrl + ", price=" + price + "]";
 	}
 
 	public Integer getVersion() {
